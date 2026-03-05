@@ -1,17 +1,17 @@
-# proxmark3-tool
+# proxmark3_rfid_analyzer
 
 > **RFID/NFC kart güvenlik analiz aracı** — Proxmark3 çıktılarını okuyarak kart türünü otomatik tespit eder, CVSS tabanlı güvenlik açığı analizi yapar, saldırı matrisini çıkarır ve hem terminal hem Markdown rapor üretir.
 
 ---
 
-## ⚠️ Etik Kullanım Bildirimi
+## Etik Kullanım Bildirimi
 
 Bu araç **yalnızca eğitim, araştırma ve yetkili güvenlik testi** amaçlı geliştirilmiştir.
 
-- 🔒 Analiz ettiğiniz kartlar **size ait** veya **yazılı izin aldığınız** kartlar olmalıdır.
-- 🚫 Başkalarına ait RFID/NFC kartları **izinsiz** taramak, klonlamak veya manipüle etmek **yasa dışıdır** ve etik değildir.
-- ⚖️ Yetkisiz kullanımdan doğacak tüm hukuki sorumluluk **kullanıcıya** aittir.
-- 🎓 Araç, RFID güvenlik açıklarını anlamanız ve savunma önlemleri geliştirmeniz için tasarlanmıştır.
+- Analiz ettiğiniz kartlar **size ait** veya **yazılı izin aldığınız** kartlar olmalıdır.
+- Başkalarına ait RFID/NFC kartları **izinsiz** taramak, klonlamak veya manipüle etmek **yasa dışıdır** ve etik değildir.
+- Yetkisiz kullanımdan doğacak tüm hukuki sorumluluk **kullanıcıya** aittir.
+- Araç, RFID güvenlik açıklarını anlamanız ve savunma önlemleri geliştirmeniz için tasarlanmıştır.
 
 > **Kötüye kullanım durumunda geliştirici hiçbir sorumluluk kabul etmez.**
 
@@ -20,7 +20,7 @@ Bu araç **yalnızca eğitim, araştırma ve yetkili güvenlik testi** amaçlı 
 ## 🚀 Tek Satırda Kur (Linux / macOS / WSL)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Cinargenc/proxmark3-tool/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Cinargenc/proxmark3_rfid_analyzer/main/install.sh | bash
 ```
 
 Gereksinimler: `git`, `python3` (harici kütüphane gerekmez)
@@ -30,7 +30,7 @@ Gereksinimler: `git`, `python3` (harici kütüphane gerekmez)
 ## Manuel Kurulum
 
 ```bash
-git clone https://github.com/Cinargenc/proxmark3-tool.git
+git clone https://github.com/Cinargenc/proxmark3_rfid_analyzer.git
 cd proxmark3-tool
 python3 main.py samples/mifare_classic_1k.txt
 ```
@@ -221,14 +221,14 @@ proxmark3-tool/
 
 ## Özellikler
 
-- 🔍 **Otomatik Kart Tanıma** — SAK, ATQA, ATS, LF modülasyon desenlerine göre 30+ kart profilini otomatik eşleştirir
-- 🛡️ **CVSS v3.1 Zafiyet Motoru** — JSON tabanlı trigger sistemiyle dinamik zafiyet değerlendirmesi
-- ⚔️ **Saldırı Matrisi** — Tespit edilen kart tipine uygun saldırı senaryoları ve araçları
-- 📊 **Risk Skorlama** — Çoklu faktörlü (kripto, UID, protokol, zamanlama) risk hesaplama
-- 📝 **Çoklu Rapor Çıktısı** — Renkli terminal, JSON ve Markdown formatında raporlar
-- 🗄️ **Zafiyet Veritabanı CLI** — `vuln_query.py` ile filtreleme ve arama
-- 🪟 **Platform Desteği** — Linux, macOS, WSL ve Windows'ta çalışır (ANSI renk desteği dahil)
-- 📦 **Sıfır Bağımlılık** — Sadece Python 3 standart kütüphanesi
+- **Otomatik Kart Tanıma** — SAK, ATQA, ATS, LF modülasyon desenlerine göre 30+ kart profilini otomatik eşleştirir
+- **CVSS v3.1 Zafiyet Motoru** — JSON tabanlı trigger sistemiyle dinamik zafiyet değerlendirmesi
+- **Saldırı Matrisi** — Tespit edilen kart tipine uygun saldırı senaryoları ve araçları
+- **Risk Skorlama** — Çoklu faktörlü (kripto, UID, protokol, zamanlama) risk hesaplama
+- **Çoklu Rapor Çıktısı** — Renkli terminal, JSON ve Markdown formatında raporlar
+- **Zafiyet Veritabanı CLI** — `vuln_query.py` ile filtreleme ve arama
+- **Platform Desteği** — Linux, macOS, WSL ve Windows'ta çalışır (ANSI renk desteği dahil)
+- **Sıfır Bağımlılık** — Sadece Python 3 standart kütüphanesi
 
 ---
 
